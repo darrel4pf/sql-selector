@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.sqlselector.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlselector.SelectorController">
+   <children>
+      <TextArea fx:id="textarea" layoutX="93.0" layoutY="253.0" prefHeight="267.0" prefWidth="754.0" />
+      <Button fx:id="execute" layoutX="32.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#executeQuery" prefHeight="45.0" prefWidth="130.0" text="Execute">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textfield" layoutX="97.0" layoutY="83.0" prefHeight="46.0" prefWidth="754.0" />
+      <Text layoutX="21.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Query:" wrappingWidth="71.49341201782227">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="342.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SQL Selector">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
